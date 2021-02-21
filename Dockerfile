@@ -20,6 +20,7 @@ RUN apt-get install -y python-pip
 RUN pip install --upgrade "pip < 21.0"
 COPY requirements.txt ./requirements.txt
 RUN pip install -r requirements.txt
+RUN pip install pillow -U
 
 # install required ros dependencies
 RUN apt-get install -y ros-$ROS_DISTRO-cv-bridge
